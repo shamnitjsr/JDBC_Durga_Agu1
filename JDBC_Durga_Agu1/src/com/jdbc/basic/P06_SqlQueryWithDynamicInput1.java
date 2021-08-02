@@ -2,7 +2,7 @@ package com.jdbc.basic;
 
 import java.util.Scanner;
 
-public class P6_SqlQueryWithDynamicInput1 {
+public class P06_SqlQueryWithDynamicInput1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

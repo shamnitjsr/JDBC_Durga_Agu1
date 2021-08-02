@@ -1,7 +1,7 @@
 package com.jdbc.basic;
 
 import java.sql.*;
-public class P1_CreateTableDemo 
+public class P01_CreateTableDemo 
 {
 	public static void main(String[] args) throws Exception
 	{

@@ -2,12 +2,15 @@ package com.jdbc.basic;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class P9_UpdateMultipleRowsDemo {
+public class P18_RowCountDemo {
+
 	public static void main(String[] args) throws Exception
 	{
+
 		String driver="oracle.jdbc.OracleDriver";
 		String jdbc_url="jdbc:oracle:thin:@localhost:1521:XE";
 		String user="system";
@@ -15,14 +18,12 @@ public class P9_UpdateMultipleRowsDemo {
 		Class.forName(driver);
 		Connection con = DriverManager.getConnection(jdbc_url,user,pwd);
 		Statement st = con.createStatement();
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter increment Amount:");
-		double increment =sc.nextDouble();
-		System.out.println("Enter Salary Range:");
-		double salRange =sc.nextDouble();
-		String sqlQuery=String.format("update employees67 set esal=esal+%f where esal<=%f",increment,salRange);
-		int updateCount=st.executeUpdate(sqlQuery);
-		System.out.println("The number of rows updated :"+updateCount);
+		String sqlQuery="select count(*) from employees67";
+		ResultSet rs =st.executeQuery(sqlQuery);
+		if(rs.next())
+		{
+			System.out.println(rs.getInt(1));
+		}
 		con.close();
 	}
 

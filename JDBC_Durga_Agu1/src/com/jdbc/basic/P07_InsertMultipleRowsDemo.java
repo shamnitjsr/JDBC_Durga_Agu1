@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class P7_InsertMultipleRowsDemo {
+public class P07_InsertMultipleRowsDemo {
 	public static void main(String[] args) throws Exception {
 		String driver = "oracle.jdbc.OracleDriver";
 		String jdbc_url = "jdbc:oracle:thin:@localhost:1521:XE";

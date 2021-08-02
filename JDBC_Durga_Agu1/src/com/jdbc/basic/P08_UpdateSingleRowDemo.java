@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
-public class P8_UpdateSingleRowDemo {
+public class P08_UpdateSingleRowDemo {
 	public static void main(String[] args) throws Exception
 	{
 		String driver="oracle.jdbc.OracleDriver";
